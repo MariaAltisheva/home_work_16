@@ -131,7 +131,7 @@ def get_all_users():
         return "Пользователь внесен", 200
 
 
-@app.route("/users/<int:us>", methods=["GET"])
+@app.route("/users/<int:us>", methods=['GET', 'PUT', 'DELETE'])
 def get_one_user(us):
     """Функция одного одинешеньку пользователя"""
     if request.method == 'GET':
